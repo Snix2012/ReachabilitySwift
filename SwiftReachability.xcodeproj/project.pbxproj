@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		784CE9EC292323F5AB3278FE /* Pods_SwiftReachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B08599CA3D6928C059308FD /* Pods_SwiftReachability.framework */; };
 		7E4CF1DA2292FF920059E55F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4CF1D92292FF920059E55F /* AppDelegate.swift */; };
 		7E4CF1DC2292FF920059E55F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4CF1DB2292FF920059E55F /* ViewController.swift */; };
 		7E4CF1DF2292FF920059E55F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4CF1DD2292FF920059E55F /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B08599CA3D6928C059308FD /* Pods_SwiftReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5879D6549ECA4D86DB422347 /* Pods-SwiftReachability.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftReachability.debug.xcconfig"; path = "Target Support Files/Pods-SwiftReachability/Pods-SwiftReachability.debug.xcconfig"; sourceTree = "<group>"; };
+		7DC549A713632FCAE8D5EAAA /* Pods-SwiftReachability.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftReachability.release.xcconfig"; path = "Target Support Files/Pods-SwiftReachability/Pods-SwiftReachability.release.xcconfig"; sourceTree = "<group>"; };
 		7E4CF1D62292FF920059E55F /* SwiftReachability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftReachability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E4CF1D92292FF920059E55F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E4CF1DB2292FF920059E55F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				784CE9EC292323F5AB3278FE /* Pods_SwiftReachability.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44A7094DB4D0BF41BA3EDB6C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5879D6549ECA4D86DB422347 /* Pods-SwiftReachability.debug.xcconfig */,
+				7DC549A713632FCAE8D5EAAA /* Pods-SwiftReachability.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7E4CF1CD2292FF920059E55F = {
 			isa = PBXGroup;
 			children = (
 				7E4CF1D82292FF920059E55F /* SwiftReachability */,
 				7E4CF1D72292FF920059E55F /* Products */,
+				44A7094DB4D0BF41BA3EDB6C /* Pods */,
+				999BC8412CB08F2AA5BBF8B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +81,14 @@
 			path = SwiftReachability;
 			sourceTree = "<group>";
 		};
+		999BC8412CB08F2AA5BBF8B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B08599CA3D6928C059308FD /* Pods_SwiftReachability.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E4CF1E82292FF960059E55F /* Build configuration list for PBXNativeTarget "SwiftReachability" */;
 			buildPhases = (
+				3EBD40E58E17176AB581C86A /* [CP] Check Pods Manifest.lock */,
 				7E4CF1D22292FF920059E55F /* Sources */,
 				7E4CF1D32292FF920059E55F /* Frameworks */,
 				7E4CF1D42292FF920059E55F /* Resources */,
+				61406A08A937706BE183EDE8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EBD40E58E17176AB581C86A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftReachability-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61406A08A937706BE183EDE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftReachability/Pods-SwiftReachability-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftReachability/Pods-SwiftReachability-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7E4CF1D22292FF920059E55F /* Sources */ = {
@@ -280,6 +354,7 @@
 		};
 		7E4CF1E92292FF960059E55F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5879D6549ECA4D86DB422347 /* Pods-SwiftReachability.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +373,7 @@
 		};
 		7E4CF1EA2292FF960059E55F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DC549A713632FCAE8D5EAAA /* Pods-SwiftReachability.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
